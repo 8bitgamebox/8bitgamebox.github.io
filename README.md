@@ -1,2 +1,2 @@
-# LZAKMR-Game-List
+# 8BIT GAME BOX PRO Game List
 8BIT GAME BOX PRO Game List
