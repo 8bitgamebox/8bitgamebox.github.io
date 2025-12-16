@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>8BIT GAME BOX PRO list</title>
+<style>
+    :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --bg-color: #f8f9fa;
+        --card-bg: #ffffff;
+        --text-color: #333;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* --- 通用/桌面端样式 --- */
+    header {
+        background: var(--primary-gradient);
+        color: white;
+        padding: 60px 20px 100px;
+        text-align: center;
+        /* 桌面端比较锐利的切角 */
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    
+    h1 { margin: 0; font-size: 2.8em; font-weight: 700; }
+    p.subtitle { opacity: 0.9; font-size: 1.2em; margin-top: 15px; }
+
+    .nav-container {
+        max-width: 1100px;
+        margin: -80px auto 40px;
+        padding: 0 20px;
+        display: grid;
+        /* 桌面端默认：自动适应，最小宽度240px */
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+        position: relative;
+        z-index: 10;
+        flex: 1;
+    }
+
+    .nav-card {
+        background: var(--card-bg);
+        padding: 30px 20px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        text-align: center;
+        text-decoration: none;
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s;
+        border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    /* 只有在支持鼠标悬停的设备上才启用悬浮上浮效果 */
+    @media (hover: hover) {
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    }
+
+    .nav-card h3 {
+        margin: 10px 0 0;
+        font-size: 1.25em;
+        color: #2c3e50;
+    }
+    
+    .nav-card .emoji-icon {
+        font-size: 36px;
+        line-height: 1;
+    }
+
+    .nav-card .tag {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 6px 16px;
+        background-color: #e3f2fd;
+        color: #1565c0;
+        border-radius: 50px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #999;
+        font-size: 0.9em;
+        background: #fff;
+        margin-top: auto;
+    }
+
+    /* =========================================
+       媒体查询：专门针对移动端 (宽度小于 768px)
+       ========================================= */
+    @media screen and (max-width: 768px) {
+        
+        /* 1. 调整头部：减小高度，切角变缓和 */
+        header {
+            padding: 40px 15px 70px;
+            /* 这种切角在手机上看起来更自然 */
+            clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+        }
+
+        h1 { font-size: 1.8rem; } /* 字体变小 */
+        p.subtitle { font-size: 1rem; margin-top: 8px; }
+
+        /* 2. 调整容器布局 */
+        .nav-container {
+            margin-top: -50px; /* 上浮距离减小 */
+            padding: 0 15px;   /* 两侧留白减小 */
+            gap: 15px;         /* 卡片间距减小 */
+            
+            /* 【核心】：强制变为 2 列布局 */
+            grid-template-columns: repeat(2, 1fr);
+            
+            /* 如果你想在手机上显示单列（一行一个），把上面那行删掉，换成下面这行： */
+            /* grid-template-columns: 1fr; */
+        }
+
+        /* 3. 调整卡片细节 */
+        .nav-card {
+            padding: 20px 10px; /* 减小内边距 */
+            border-radius: 12px;
+        }
+
+        .nav-card .emoji-icon {
+            font-size: 28px; /* 图标变小 */
+        }
+
+        .nav-card h3 {
+            font-size: 1rem; /* 标题变小 */
+            margin-top: 8px;
+        }
+
+        .nav-card .tag {
+            padding: 4px 12px;
+            font-size: 0.75rem; /* 标签字体变小 */
+            margin-top: 8px;
+        }
+
+        /* 4. 增加点击时的按压效果（替代Hover） */
+        .nav-card:active {
+            background-color: #f0f0f0;
+            transform: scale(0.98);
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>8BIT GAME BOX Game List</h1>
+    <p class="subtitle">Select your console version</p>
+</header>
+
+<div class="nav-container">
+
+
+    
+    <a href="https://tsz3556.github.io/LZAKMR-Game-List/LZAKMR Neostation Game 500GB .html" class="nav-card" target="_blank">
+        <span class="emoji-icon">🎮</span>
+        <h3>8BIT GAME BOX PRO</h3>
+        <span class="tag" style="background-color: #e0f2f1; color: #00695c;">500GB</span>
+    </a>
+    
+    <a href="https://tsz3556.github.io/LZAKMR-Game-List/LZAKMR Neostation Game 1TB.html" class="nav-card" target="_blank">
+        <span class="emoji-icon">🎮</span>
+        <h3>8BIT GAME BOX PRO</h3>
+        <span class="tag" style="background-color: #e0f2f1; color: #00695c;">1TB</span>
+    </a>
+    
+    <a href="https://tsz3556.github.io/LZAKMR-Game-List/LZAKMR Neostation 2TB Game list.html" class="nav-card" target="_blank">
+        <span class="emoji-icon">🎮</span>
+        <h3>8BIT GAME BOX PRO</h3>
+        <span class="tag" style="background-color: #e0f2f1; color: #00695c;">2TB</span>
+    </a>
+    
+</div>
+
+<footer>
+    <p>&copy; 2025 8BIT GAME BOX Game List</p>
+</footer>
+
+</body>
+</html>
+
